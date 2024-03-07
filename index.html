@@ -11,45 +11,48 @@
     <link rel="stylesheet" href="build/css/app.css">
 </head>
 <body>
-    <header>
-        <div class="header__container">
+    <header class="header">
+        <div class="header__container container">
             <div class="header__logo">
-                <h1>CountriesApp</h1>
+                <h1 class="header__title">CountriesApp</h1>
             </div>
-            <button class="header__switch">
-                <span><i class="fa-solid fa-moon"></i></span>
-                <span><i class="fa-solid fa-sun"></i></span>
-            </button>
-            <p>Dark Mode</p>
+            <div class="header__buttons">
+                <button class="header__switch" id="switch">
+                    <span><i class="fa-solid fa-moon"></i></span>
+                    <span><i class="fa-solid fa-sun"></i></span>
+                </button>
+                <p class="header__mode">Dark Mode</p>
+            </div>
         </div>
     </header>
-    <section class="forms">
-        <div class="form__container">
-            <form action="" class="forms__input">
-                <div class="forms__group">
-                    <label for="name">name</label>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" name="name" placeholder="Serach for a country">
-                </div>
-            </form>
-
-            <form action="" class="forms__select">
-                <div class="forms__group">
-                    <select name="region" id="region">
-                        <option value="" selected>Filter by Region</option>
-                        <option value="Africa">Africa</option>
-                        <option value="Americas">America</option>
-                        <option value="Asia</">Asia</option>
-                        <option value="europe">Europa</option>
-                        <option value="Oceania">Oceania</option>
-                    </select>
-                    
-                </div>
-            </form>
-        </div>
-    </section>
-
-    <main>
+    
+    <main class="main">
+        <section class="forms">
+            <div class="form__container">
+                <form action="" class="forms__input">
+                    <div class="forms__group">
+                        <label for="name">name</label>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" name="name" placeholder="Serach for a country">
+                    </div>
+                </form>
+    
+                <form action="" class="forms__select">
+                    <div class="forms__group">
+                        <select name="region" id="region">
+                            <option value="" selected>Filter by Region</option>
+                            <option value="Africa">Africa</option>
+                            <option value="Americas">America</option>
+                            <option value="Asia</">Asia</option>
+                            <option value="europe">Europa</option>
+                            <option value="Oceania">Oceania</option>
+                        </select>
+                        
+                    </div>
+                </form>
+            </div>
+        </section>
+        
         <section class="main__container">
             <div class="card">
                 <div class="card__image">
@@ -65,5 +68,7 @@
 
         </section>
     </main>
+
+    <script src="src/js/dark.js"></script>
 </body>
 </html>
