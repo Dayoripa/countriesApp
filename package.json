@@ -1,0 +1,26 @@
+{
+  "name": "countries",
+  "version": "1.0.0",
+  "description": "This project use the API Countries and the app show the flats of some country ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Dayoripa/countriesApp.git"
+  },
+  "author": "Dayoripa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dayoripa/countriesApp/issues"
+  },
+  "homepage": "https://github.com/Dayoripa/countriesApp#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.18",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^10.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.71.1"
+  }
+}

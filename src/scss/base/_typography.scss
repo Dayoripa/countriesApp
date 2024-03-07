@@ -1,0 +1,14 @@
+@use 'base/variables' as v;
+
+h1, h2, h3 {
+    margin: 0 0 v.$separation 0;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5;
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3.6rem;
+}
