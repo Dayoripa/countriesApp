@@ -1,0 +1,64 @@
+@use 'base/variables' as v;
+
+
+.countries {
+    margin: 4rem 0;
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 3rem;
+        @media(min-width: v.$tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media(min-width: v.$desktop) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+.card {
+    border-radius: .5rem;
+    overflow: hidden;
+    width: 26rem;
+    @media(min-width: v.$phone) {
+        width: 32rem; 
+    }
+    @media(min-width: v.$desktop) {
+        width: 26rem; 
+    }
+
+    &__flag {
+        
+    }
+    &__body {
+        background-color: v.$txDark;
+        padding: 3rem;
+        body.dark & {
+            background-color: v.$darkEle;
+        }
+        
+    }
+    &__heading {
+        font-size: 1.8rem;
+        font-weight: 800;
+        text-align: left;
+        margin-bottom: 1.5rem;
+        letter-spacing: .1rem;
+
+        body.dark & {
+            color: v.$txDark;
+        }
+        
+    }
+
+    &__list {
+        margin-bottom: 1rem;
+        letter-spacing: .1rem;
+        body.dark & {
+            color: v.$txDark;
+        }
+        span {
+            font-weight: 600;
+        }
+    }
+}
