@@ -1,0 +1,17 @@
+@use 'base/variables' as v;
+
+.dark {
+    background-color: v.$bgDark;
+}
+
+.form {
+    border: 0;
+    border-radius: .5rem;
+    font-size: 1.8rem;
+    outline: none;
+    box-shadow: 0px 0px 1.5px 0px v.$inputLight;
+    body.dark & {
+        background-color: v.$darkEle;
+        color: v.$txDark;
+    }
+}

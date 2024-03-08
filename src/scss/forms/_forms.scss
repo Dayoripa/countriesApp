@@ -1,1 +1,77 @@
 @use 'base/variables' as v;
+
+.main {
+    box-shadow: 0px 0px 3px -1px v.$inputLight;
+}
+.forms {
+    &__container {
+        @media(min-width: v.$desktop) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__input {
+        padding: 3rem 0;
+        @media(min-width: v.$desktop) {
+            margin-top: 2rem;
+        }
+    }
+    &__group {
+        position: relative;
+
+        input {
+            padding: 1.5rem 1rem 1.5rem v.$separation;
+            width: 100%;
+            @media(min-width: v.$tablet) {
+                width: 50rem;
+            }
+            @media(min-width: v.$tv) {
+                font-size: 2.8rem;
+                padding-left: 7rem;
+            }
+
+        }
+        input::placeholder {
+            body.dark & {
+                color: v.$txDark;
+            }
+        }
+        span {
+            color: v.$inputLight;
+            font-size: 2.2rem;
+            position: absolute;
+            top: 1.6rem;
+            left: 2rem;
+            body.dark & {
+                color: v.$txDark;;
+            }
+            @media(min-width: v.$tv) {
+                font-size: 2.7rem;
+                top: 1.8rem;
+            }
+
+        }
+    }
+    &__select {
+        
+        select {
+            letter-spacing: .1rem;
+            padding: 1.5rem 3rem;
+            margin-top: 3rem;
+            width: 100%;
+            @media(min-width: v.$phone) {
+                width: 25rem;
+            }
+            @media(min-width: v.$tablet) {
+                width: 30rem;
+                
+            }
+            
+            @media(min-width: v.$tv) {
+                font-size: 2rem;
+                font-weight: 400;
+            }
+        }
+    }
+}

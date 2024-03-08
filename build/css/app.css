@@ -367,6 +367,12 @@ h2 {
   font-size: 3.6rem;
 }
 
+.header {
+  padding: 1.4rem 0;
+}
+body.dark .header {
+  background-color: hsl(209, 23%, 22%);
+}
 .header__container {
   display: flex;
   align-items: center;
@@ -392,6 +398,11 @@ body.dark .header__title {
     font-size: 3rem;
   }
 }
+@media (min-width: 1440px) {
+  .header__title {
+    font-size: 4.5rem;
+  }
+}
 .header__buttons {
   display: flex;
   align-items: center;
@@ -411,6 +422,11 @@ body.dark .header__mode {
     font-size: 1.4rem;
   }
 }
+@media (min-width: 1440px) {
+  .header__mode {
+    font-size: 2rem;
+  }
+}
 .header__switch {
   background-color: hsl(0, 0%, 52%);
   border: none;
@@ -425,10 +441,26 @@ body.dark .header__mode {
   width: 4.1rem;
   padding: 0 1rem;
 }
+@media (min-width: 1440px) {
+  .header__switch {
+    height: 2.6rem;
+    width: 5.5rem;
+    padding: 0rem;
+    gap: 1rem;
+  }
+}
 .header__switch span i {
   color: hsl(0, 0%, 100%);
   display: block;
   line-height: 2rem;
+}
+@media (min-width: 1440px) {
+  .header__switch span i {
+    line-height: 2.5rem;
+    font-size: 2rem;
+    justify-content: center;
+    padding: 0;
+  }
 }
 .header__switch::after {
   content: "";
@@ -441,11 +473,112 @@ body.dark .header__mode {
   left: 0;
   right: unset;
 }
+@media (min-width: 1440px) {
+  .header__switch::after {
+    width: 2.8rem;
+    height: 2.8rem;
+    top: -0.1rem;
+  }
+}
 .header__switch--active::after {
   right: 0;
   left: unset;
 }
 
+.main {
+  box-shadow: 0px 0px 3px -1px hsl(0, 0%, 52%);
+}
+
+@media (min-width: 1024px) {
+  .forms__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.forms__input {
+  padding: 3rem 0;
+}
+@media (min-width: 1024px) {
+  .forms__input {
+    margin-top: 2rem;
+  }
+}
+.forms__group {
+  position: relative;
+}
+.forms__group input {
+  padding: 1.5rem 1rem 1.5rem 5rem;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .forms__group input {
+    width: 50rem;
+  }
+}
+@media (min-width: 1440px) {
+  .forms__group input {
+    font-size: 2.8rem;
+    padding-left: 7rem;
+  }
+}
+body.dark .forms__group input::-moz-placeholder {
+  color: hsl(0, 0%, 100%);
+}
+body.dark .forms__group input::placeholder {
+  color: hsl(0, 0%, 100%);
+}
+.forms__group span {
+  color: hsl(0, 0%, 52%);
+  font-size: 2.2rem;
+  position: absolute;
+  top: 1.6rem;
+  left: 2rem;
+}
+body.dark .forms__group span {
+  color: hsl(0, 0%, 100%);
+}
+@media (min-width: 1440px) {
+  .forms__group span {
+    font-size: 2.7rem;
+    top: 1.8rem;
+  }
+}
+.forms__select select {
+  letter-spacing: 0.1rem;
+  padding: 1.5rem 3rem;
+  margin-top: 3rem;
+  width: 100%;
+}
+@media (min-width: 375px) {
+  .forms__select select {
+    width: 25rem;
+  }
+}
+@media (min-width: 768px) {
+  .forms__select select {
+    width: 30rem;
+  }
+}
+@media (min-width: 1440px) {
+  .forms__select select {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+}
+
 .dark {
   background-color: hsl(207, 26%, 17%);
+}
+
+.form {
+  border: 0;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+  outline: none;
+  box-shadow: 0px 0px 1.5px 0px hsl(0, 0%, 52%);
+}
+body.dark .form {
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
 }

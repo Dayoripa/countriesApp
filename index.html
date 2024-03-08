@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countries App</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="build/css/app.css">
 </head>
+
 <body>
     <header class="header">
         <div class="header__container container">
@@ -25,34 +29,30 @@
             </div>
         </div>
     </header>
-    
+
     <main class="main">
         <section class="forms">
-            <div class="form__container">
-                <form action="" class="forms__input">
+            <div class="forms__container container">
+                <form class="forms__input">
                     <div class="forms__group">
-                        <label for="name">name</label>
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" name="name" placeholder="Serach for a country">
+                        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <input class="form" type="text" name="name" placeholder="Search for a country">
                     </div>
                 </form>
-    
-                <form action="" class="forms__select">
-                    <div class="forms__group">
-                        <select name="region" id="region">
-                            <option value="" selected>Filter by Region</option>
-                            <option value="Africa">Africa</option>
-                            <option value="Americas">America</option>
-                            <option value="Asia</">Asia</option>
-                            <option value="europe">Europa</option>
-                            <option value="Oceania">Oceania</option>
-                        </select>
-                        
-                    </div>
+
+                <form class="forms__select">
+                    <select class="form" name="region" id="region">
+                        <option value="" selected>Filter by Region</option>
+                        <option value="Africa">Africa</option>
+                        <option value="Americas">America</option>
+                        <option value="Asia</">Asia</option>
+                        <option value="europe">Europa</option>
+                        <option value="Oceania">Oceania</option>
+                    </select>
                 </form>
             </div>
         </section>
-        
+
         <section class="main__container">
             <div class="card">
                 <div class="card__image">
@@ -71,4 +71,5 @@
 
     <script src="src/js/dark.js"></script>
 </body>
+
 </html>

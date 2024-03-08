@@ -1,6 +1,10 @@
 @use 'base/variables' as v;
 
 .header {
+    padding: 1.4rem 0;
+    body.dark & {
+        background-color: v.$darkEle;
+    }
     
     &__container {
        display: flex;
@@ -26,6 +30,9 @@
         @media(min-width: v.$tablet) {
             font-size: 3rem;
         }
+        @media(min-width: v.$tv) {
+            font-size: 4.5rem;
+        }
 
     }
     &__buttons {
@@ -44,6 +51,9 @@
         @media(min-width: v.$phone) {
             font-size: 1.4rem;
         }
+        @media(min-width: v.$tv) {
+            font-size: 2rem;
+        }
     
     }
     &__switch {
@@ -59,10 +69,22 @@
         height: 2rem; 
         width: 4.1rem;
         padding: 0 1rem;
+        @media(min-width: v.$tv) {
+            height: 2.6rem; 
+            width: 5.5rem;
+            padding: 0rem;
+            gap: 1rem;
+        }
         span i {
             color: v.$txDark;
             display: block;
             line-height: 2rem;
+            @media(min-width: v.$tv) {
+                line-height: 2.5rem;
+                font-size: 2rem;
+                justify-content: center;
+                padding: 0;
+            }
         }
     }
     &__switch::after {
@@ -75,14 +97,15 @@
         top: 0;
         left: 0;
         right: unset;
+        @media(min-width: v.$tv) {
+            width: 2.8rem;
+            height: 2.8rem;
+            top: -.1rem;
+        }
     }
     &__switch--active::after {
         right: 0;
         left: unset;
     }
 
-}
-
-.dark {
-    background-color: v.$bgDark; 
 }
