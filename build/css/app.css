@@ -319,7 +319,7 @@ html {
 
 body {
   background-color: hsl(0, 0%, 98%);
-  color: hsl(209, 23%, 22%);
+  color: hsl(200, 15%, 8%);
   font-family: "Nunito Sans", sans-serif;
   font-size: 1.6rem;
   transition: 300ms all ease-out;
@@ -487,6 +487,7 @@ body.dark .header__mode {
 
 .main {
   box-shadow: 0px 0px 3px -1px hsl(0, 0%, 52%);
+  padding-bottom: 1rem;
 }
 
 @media (min-width: 1024px) {
@@ -565,6 +566,69 @@ body.dark .forms__group span {
     font-size: 2rem;
     font-weight: 400;
   }
+}
+
+.countries {
+  margin: 4rem 0;
+}
+.countries__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 3rem;
+}
+@media (min-width: 768px) {
+  .countries__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .countries__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  width: 26rem;
+}
+@media (min-width: 375px) {
+  .card {
+    width: 32rem;
+  }
+}
+@media (min-width: 1024px) {
+  .card {
+    width: 26rem;
+  }
+}
+.card__body {
+  background-color: hsl(0, 0%, 100%);
+  padding: 3rem;
+}
+body.dark .card__body {
+  background-color: hsl(209, 23%, 22%);
+}
+.card__heading {
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+body.dark .card__heading {
+  color: hsl(0, 0%, 100%);
+}
+.card__list {
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
+}
+body.dark .card__list {
+  color: hsl(0, 0%, 100%);
+}
+.card__list span {
+  font-weight: 600;
 }
 
 .dark {
