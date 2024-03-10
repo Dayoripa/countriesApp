@@ -1,0 +1,36 @@
+@use 'base/variables' as v;
+
+
+.border {
+    margin-bottom: 3rem;
+    &__heading {
+        font-size: 1.5rem;
+        text-align: left;
+        margin-bottom: 1rem;
+        body.dark & {
+            color: v.$txDark;
+        }
+    }
+    &__content {
+        display: flex;
+        justify-content: center;
+    }
+    &__btn {
+        border: none;
+        background-color: v.$bgLight;
+        box-shadow: 0px 0px 3px 1px v.$inputLight;
+        border-radius: .5rem;
+        font-size: 1.2rem;
+        margin-right: .8rem;
+        padding: .8rem 1.3rem;
+        width: 12rem;
+        body.dark & {
+            background-color: v.$darkEle;
+            box-shadow: 0px 0px 3px 1px v.$txLight;
+            color: v.$txDark;
+        }
+    }
+    &__btn:last-of-type {
+        margin-right: 0;
+    }
+}

@@ -15,6 +15,7 @@
     }
     &__input {
         padding: 3rem 0;
+        flex-direction: column;
         @media(min-width: v.$desktop) {
             margin-top: 2rem;
         }

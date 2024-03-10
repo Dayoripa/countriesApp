@@ -18,7 +18,9 @@
     <header class="header">
         <div class="header__container container">
             <div class="header__logo">
-                <h1 class="header__title">CountriesApp</h1>
+                <h1 class="header__title">
+                    <a href="index.html">CountriesApp</a>
+                </h1>
             </div>
             <div class="header__buttons">
                 <button class="header__switch" id="switch">
@@ -33,11 +35,12 @@
     <main class="main">
         <section class="forms">
             <div class="forms__container container">
-                <form class="forms__input">
+                <form id="form" class="forms__input">
                     <div class="forms__group">
                         <span><i class="fa-solid fa-magnifying-glass"></i></span>
-                        <input class="form" type="text" name="name" placeholder="Search for a country">
+                        <input class="form" id="input" type="text" name="input" autofocus placeholder="Search for a country">
                     </div>
+                    
                 </form>
 
                 <form class="forms__select">
@@ -45,7 +48,7 @@
                         <option value="" selected>Filter by Region</option>
                         <option value="Africa">Africa</option>
                         <option value="Americas">America</option>
-                        <option value="Asia</">Asia</option>
+                        <option value="Asia">Asia</option>
                         <option value="europe">Europa</option>
                         <option value="Oceania">Oceania</option>
                     </select>
@@ -54,68 +57,28 @@
         </section>
 
         <section class="countries">
-            <div class="countries__grid container">
-                <div class="card ">
-                    <div class="card__flag">
-                        <a href="details.html"><img src="src/image/col.png" alt="Bandera colombia"></a>
+            <div id="country" class="countries__grid container">
+                <!-- <div class="card" id="card">
+                    <div class="card__content">
+                        <div class="card__flag">
+                            <a href="details.html"><img src="src/image/col.png" alt="Bandera colombia"></a>
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__heading">Colombia</h3>
+                            <ul>
+                                <li class="card__list"><span>Population:</span> 50882884</li>
+                                <li class="card__list"><span>Region:</span> America</li>
+                                <li class="card__list"><span>Capital:</span> Bogota</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="card__body">
-                        <h3 class="card__heading">Colombia</h3>
-                        <ul>
-                            <li class="card__list"><span>Population:</span> 50882884</li>
-                            <li class="card__list"><span>Region:</span> America</li>
-                            <li class="card__list"><span>Capital:</span> Bogota</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="card ">
-                    <div class="card__flag">
-                        <img src="src/image/col.png" alt="Bandera colombia">
-                    </div>
-                    <div class="card__body">
-                        <h3 class="card__heading">Colombia</h3>
-                        <ul>
-                            <li class="card__list"><span>Population:</span> 50882884</li>
-                            <li class="card__list"><span>Region:</span> America</li>
-                            <li class="card__list"><span>Capital:</span> Bogota</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="card ">
-                    <div class="card__flag">
-                        <img src="src/image/col.png" alt="Bandera colombia">
-                    </div>
-                    <div class="card__body">
-                        <h3 class="card__heading">Colombia</h3>
-                        <ul>
-                            <li class="card__list"><span>Population:</span> 50882884</li>
-                            <li class="card__list"><span>Region:</span> America</li>
-                            <li class="card__list"><span>Capital:</span> Bogota</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="card ">
-                    <div class="card__flag">
-                        <img src="src/image/col.png" alt="Bandera colombia">
-                    </div>
-                    <div class="card__body">
-                        <h3 class="card__heading">Colombia</h3>
-                        <ul>
-                            <li class="card__list"><span>Population:</span> 50882884</li>
-                            <li class="card__list"><span>Region:</span> America</li>
-                            <li class="card__list"><span>Capital:</span> Bogota</li>
-                        </ul>
-                    </div>
-                </div>
-                
+                </div> -->
             </div>
         </section>
     </main>
 
     <script src="src/js/dark.js"></script>
+    <script src="src/js/app.js"></script>
 </body>
 
 </html>

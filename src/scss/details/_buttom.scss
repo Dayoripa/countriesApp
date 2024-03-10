@@ -1,0 +1,31 @@
+@use 'base/variables' as v;
+
+.btnback {
+    padding: v.$separation 0 2rem 0;
+    &__btn {
+        background: transparent;
+        background-color: v.$bgLight;
+        border: none;
+        box-shadow: 0px 0px 4px 1px v.$inputLight;
+        border-radius: .5rem;
+        font-size: 1.5rem;
+        text-transform: capitalize;
+        padding: 1.2rem 0;
+        width: 12rem;
+        a {
+            color: v.$txLight;
+            body.dark & {
+                color: v.$txDark;
+            }
+        }
+
+        body.dark & {
+            background-color: v.$darkEle;
+            box-shadow: 0px 0px 4px 1px v.$txLight;
+        }
+
+        span {
+            margin-left: 1rem;
+        }
+    }
+}

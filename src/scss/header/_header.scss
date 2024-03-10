@@ -17,13 +17,16 @@
     }
 
     &__title {
-        color: v.$txLight;
         font-size: 1.5rem;
         font-weight: 900;
         margin: 0;
-        body.dark & {
-            color: v.$txDark;
+        a {
+            color: v.$txLight;
+            body.dark & {
+                color: v.$txDark;
+            }
         }
+        
         @media(min-width: v.$phone) {
             font-size: 2rem;
         }
