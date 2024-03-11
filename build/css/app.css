@@ -653,6 +653,9 @@ body.dark .btnback__btn {
   margin-left: 1rem;
 }
 
+.details {
+  margin-bottom: 5rem;
+}
 .details__grid {
   display: flex;
   flex-direction: column;
@@ -661,7 +664,6 @@ body.dark .btnback__btn {
   .details__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    align-items: center;
   }
 }
 @media (min-width: 1024px) {
@@ -680,6 +682,7 @@ body.dark .btnback__btn {
 @media (min-width: 768px) {
   .details__flag {
     width: 90%;
+    grid-row: 1/3;
   }
 }
 @media (min-width: 1024px) {

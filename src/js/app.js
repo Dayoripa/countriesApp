@@ -2,6 +2,8 @@ const paises = document.querySelector('#country');
 const form = document.querySelector('#form');
 const select = document.querySelector('.forms__select');
 
+
+
 const getCountries = countries => new Promise(resolve => {
     resolve(countries);
 
@@ -11,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
     consultCountries();
     form.addEventListener('submit', validForm);
     select.addEventListener('change', consultRegion);
+    
+    
 });
 
 const consultCountries = async () => {
@@ -28,16 +32,15 @@ const consultCountries = async () => {
 }
 
 const showCountries = (countries) => {
-
+    console.log(countries)
     countries.forEach(country => {
         const { flags: {png}, name: {common},  population, region, capital } = country;
         
         const card = document.createElement('DIV');
         card.classList.add('card');
-
         card.innerHTML = `
             <div class="card__flag">
-                <a href="details.html"><img src="${png}" alt="Flag ${common}"></a>
+                <a href="details.html"><img id="${common}" src="${png}" alt="Flag ${common}"></a>
             </div>
              <div class="card__body">
                  <h3 class="card__heading">${common}</h3>
@@ -48,9 +51,13 @@ const showCountries = (countries) => {
                  </ul>
              </div>
         `;
+        
+        paises.appendChild(card);   
 
-        paises.appendChild(card);
-    });
+        card.addEventListener('click', getDetailsCountry);
+    });  
+        
+    
 }
 
 const validForm = (e) => {
@@ -102,7 +109,7 @@ const getCountry = async country => {
 }
 
 const showCountry = countrys => {
-
+    console.log(countrys);
     cleanHtml(paises);
 
     countrys.forEach(country => {
@@ -146,6 +153,58 @@ const showCountry = countrys => {
     });
 }
 
+
+async function getDetailsCountry(e) {
+    const name = e.target.id;
+
+    try {
+       const url = `https://restcountries.com/v3.1/name/${name}`;
+       const resp = await fetch(url);
+       const res = await resp.json();
+       const country = await getCountries(res);
+       objDetailsCountry(country);
+   } catch (error) {
+       console.log(error);
+   }
+
+}
+
+const objDetailsCountry = country => {
+    
+    country.forEach(data => {
+        const { name:{common}, flags:{png, alt}, population, region, subregion, capital, currencies, languages, tld, borders } = data;
+    
+        const current = Object.keys(currencies);
+        const lang = Object.keys(languages);
+        let border ='';
+
+         if(borders) {
+             border = Object.values(borders);
+         }
+        
+         saveLocalstorage({
+             flags: png,
+             alt: alt,
+             name: common,
+             pop: population,
+             region: region,
+             subrg: subregion,
+             cap: capital,
+             tld: tld,
+             currency: current,
+             language: lang,
+             borders: border
+         });
+
+    });
+};
+
+
+const saveLocalstorage = (objDetails) => {
+    localStorage.setItem('detailscountry', JSON.stringify(objDetails));
+}
+
+
 const consultRegion = async () => {
     const region = document.querySelector('#region').value;
     const url = `https://restcountries.com/v3.1/region/${region}`;
@@ -161,7 +220,7 @@ const consultRegion = async () => {
 }
 
 const showCountriesRegion = region => {
-
+    console.log(region);
     cleanHtml(paises);
 
     region.forEach(country => {
