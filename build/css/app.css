@@ -584,6 +584,7 @@ body.dark .forms__group span {
 .card {
   border-radius: 0.5rem;
   overflow: hidden;
+  transition: all 300ms ease-in;
 }
 .card__flag {
   box-shadow: 0px 0px 1.5px 0px hsl(0, 0%, 52%);
@@ -623,6 +624,10 @@ body.dark .card__list {
 }
 .card__list span {
   font-weight: 600;
+}
+
+.card:hover {
+  transform: scale(1.1);
 }
 
 .btnback {
