@@ -7,7 +7,7 @@ window.onload = () => {
 //Save details in LocalStorage
 const startDetailscountry = () => {
 
-    const details = JSON.parse(localStorage.getItem('detailscountry') ) ?? [];
+    const details = JSON.parse(localStorage.getItem('detailscountry') );
     showDetailsCountry(details);
 }
 
@@ -31,6 +31,7 @@ const showDetailsCountry = (obj) => {
 
     
     const border = obj.borders;
+    
 // Convierte los elementos del atributo borders del obje en Array
     const totalBorder = Object.values(border);
 

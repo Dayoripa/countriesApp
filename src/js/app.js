@@ -127,6 +127,7 @@ const showCountry = countrys => {
         const img = document.createElement('IMG');
         img.src =`${png}`;
         img.alt = `${alt}`;
+        img.id=`${common}`;
 
         const cardBody = document.createElement('DIV');
         cardBody.classList.add('card__body');
@@ -150,24 +151,31 @@ const showCountry = countrys => {
         cardBody.appendChild(h3);
         cardBody.appendChild(ul);
         paises.appendChild(card);
+
+        card.addEventListener('click', getDetailsCountry);
     });
+    
 }
 
 
 async function getDetailsCountry(e) {
-    const name = e.target.id;
+    e.preventDefault();
 
-    try {
-       const url = `https://restcountries.com/v3.1/name/${name}`;
-       const resp = await fetch(url);
-       const res = await resp.json();
-       const country = await getCountries(res);
-       objDetailsCountry(country);
-   } catch (error) {
-       console.log(error);
-   }
-
+    if(e.target.id) {
+            const name = e.target.id;
+    
+            try {
+            const url = `https://restcountries.com/v3.1/name/${name}`;
+            const resp = await fetch(url);
+            const res = await resp.json();
+            const country = await getCountries(res);
+            objDetailsCountry(country);
+        } catch (error) {
+            console.log(error);
+        }
+    }
 }
+
 
 const objDetailsCountry = country => {
     
@@ -201,7 +209,11 @@ const objDetailsCountry = country => {
 
 
 const saveLocalstorage = (objDetails) => {
+    
     localStorage.setItem('detailscountry', JSON.stringify(objDetails));
+
+    location.href = 'details.html';
+    console.log(objDetails);
 }
 
 
@@ -232,7 +244,7 @@ const showCountriesRegion = region => {
         card.innerHTML = `
             <div class="card">
                 <div class="card__flag">
-                    <a href="details.html"><img src="${png}" alt="${alt}"></a>
+                    <a href="details.html"><img id="${common}" src="${png}" alt="${alt}"></a>
                 </div>
                 <div class="card__body">
                     <h3 class="card__heading">${common}</h3>
@@ -245,6 +257,7 @@ const showCountriesRegion = region => {
             <div>
         `       
         paises.appendChild(card);
+        card.addEventListener('click', getDetailsCountry);
     })
 }
 

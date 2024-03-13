@@ -798,6 +798,8 @@ body.dark .border__heading {
 .border__content {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 .border__btn {
   border: none;
